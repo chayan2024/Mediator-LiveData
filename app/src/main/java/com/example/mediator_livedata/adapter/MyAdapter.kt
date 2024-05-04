@@ -14,6 +14,7 @@ class MyAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when (viewType) {
+
             TYPE_HEADER_FAST_FOOD -> {
                 val view = LayoutInflater.from(parent.context).inflate(R.layout.item_fast_food, parent, false)
                 HeaderViewHolder(view)
@@ -32,6 +33,7 @@ class MyAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             }
             else -> throw IllegalArgumentException("Invalid view type")
         }
+
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {

@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        viewModel = ViewModelProvider(this).get(MyViewModel::class.java)
+        viewModel = ViewModelProvider(this)[MyViewModel::class.java]
 
         recyclerView = findViewById(R.id.recyclerView)
         adapter = MyAdapter()
